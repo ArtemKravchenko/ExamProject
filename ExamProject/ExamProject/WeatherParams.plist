@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Params</key>
+	<array>
+		<dict>
+			<key>Lat</key>
+			<string>lat</string>
+		</dict>
+		<dict>
+			<key>Lng</key>
+			<string>lon</string>
+		</dict>
+		<dict>
+			<key>Date</key>
+			<string>date</string>
+		</dict>
+		<dict>
+			<key>Max Temp C</key>
+			<string>temp_max_c</string>
+		</dict>
+		<dict>
+			<key>Max Temp F</key>
+			<string>temp_max_f</string>
+		</dict>
+		<dict>
+			<key>Min Temp C</key>
+			<string>temp_min_c</string>
+		</dict>
+		<dict>
+			<key>Min Temp F</key>
+			<string>temp_min_f</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>weather_desc</string>
+		</dict>
+		<dict>
+			<key>Wind(km/h)</key>
+			<string>wind_speed_kmph</string>
+		</dict>
+		<dict>
+			<key>Wind(ml/h)</key>
+			<string>wind_speed_miles</string>
+		</dict>
+		<dict>
+			<key>Cloudcover</key>
+			<string>cloudcover</string>
+		</dict>
+		<dict>
+			<key>Humidity</key>
+			<string>humidity</string>
+		</dict>
+		<dict>
+			<key>Pressure</key>
+			<string>pressure</string>
+		</dict>
+	</array>
+</dict>
+</plist>

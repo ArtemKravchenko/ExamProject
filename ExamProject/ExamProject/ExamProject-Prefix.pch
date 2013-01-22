@@ -1,0 +1,45 @@
+//
+// Prefix header for all source files of the 'ExamProject' target in the 'ExamProject' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#define Assert(x) NSAssert(x, @"")
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+static NSString* const kCoder           = @"coder";
+
+
+// Request
+
+#define kWeatherBaseURLJSONRequest         @"http://free.worldweatheronline.com/feed/weather.ashx?q='lat','lon'&format=json&num_of_days=1&key=4de4d288d6075915132101"
+
+static NSString* const kRequestLat      = @"'lat'";
+static NSString* const kRequestLon      = @"'lon'";
+
+// Weather Model Constant
+
+static NSString* const kLat             = @"lat";
+static NSString* const kLon             = @"lon";
+static NSString* const kDate            = @"date";
+static NSString* const kTempMaxC        = @"temp_max_c";
+static NSString* const kTempMaxF        = @"temp_max_f";
+static NSString* const kTempMinC        = @"temp_min_c";
+static NSString* const kTempMinF        = @"temp_min_f";
+static NSString* const kWeatherDesc     = @"weather_desc";
+static NSString* const kWindSpeedKmph   = @"wind_speed_kmph";
+static NSString* const kWindSpeedMiles  = @"wind_speed_miles";
+static NSString* const kCloudcover      = @"cloudcover";
+static NSString* const kHumidity        = @"humidity";
+static NSString* const kPressure        = @"pressure";
+static NSString* const kObservationTime = @"observation_time";
+static NSString* const kIcon            = @"icon";
+static NSString* const kDictionary      = @"kDictionary";
