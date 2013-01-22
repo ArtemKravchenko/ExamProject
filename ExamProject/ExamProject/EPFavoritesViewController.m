@@ -44,7 +44,7 @@
     {
         if ([manager isWritableFileAtPath:plistPath])
         {
-            NSMutableDictionary* infoDict = [[NSMutableDictionary alloc]initWithContentsOfFile:plistPath];
+            NSMutableDictionary* infoDict = [[[NSMutableDictionary alloc]initWithContentsOfFile:plistPath] autorelease];
             [infoDict setObject:self.favoritesArray forKey:@"Favorites"];
             [infoDict writeToFile:plistPath atomically:YES];
         }
@@ -90,7 +90,7 @@
     if (self.favoritesArray.count == 0)
         self.favoritesArray = [NSMutableArray array];
     NSDictionary *tmpDictionary = [EPWeatherModel share].weatherDictionary;
-    [self.favoritesArray addObject:[tmpDictionary copy]];
+    [self.favoritesArray addObject:tmpDictionary];
     [self.tableView reloadData];
     [self writeToPlist];
 }

@@ -116,7 +116,7 @@ static dispatch_once_t predicate;
     {
         if ([manager isWritableFileAtPath:plistPath])
         {
-            NSMutableDictionary* infoDict = [[NSMutableDictionary alloc]initWithContentsOfFile:plistPath];
+            NSMutableDictionary* infoDict = [[[NSMutableDictionary alloc]initWithContentsOfFile:plistPath] autorelease];
             [infoDict setObject:self.lastLat forKey:@"LastLat"];
             [infoDict setObject:self.lastLon forKey:@"LastLon"];
             [infoDict setObject:self.lastTime forKey:@"LastTime"];
@@ -132,14 +132,9 @@ static dispatch_once_t predicate;
     [self.delegate modelCompletedInitialize];
 }
 
-- (void) requestDidFinishFail:(NSError**)error
-{
-    
-}
-
 - (void)startUpdating
 {
-    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager = [[[CLLocationManager alloc] init] autorelease];
     self.locationManager.delegate = self;
     self.locationManager.distanceFilter = kCLDistanceFilterNone;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;

@@ -54,12 +54,12 @@
         return nil;
     }
 
-	SBJsonStreamParserAccumulator *accumulator = [[SBJsonStreamParserAccumulator alloc] init];
+	SBJsonStreamParserAccumulator *accumulator = [[[SBJsonStreamParserAccumulator alloc] init] autorelease];
     
-    SBJsonStreamParserAdapter *adapter = [[SBJsonStreamParserAdapter alloc] init];
+    SBJsonStreamParserAdapter *adapter = [[[SBJsonStreamParserAdapter alloc] init] autorelease];
     adapter.delegate = accumulator;
 	
-	SBJsonStreamParser *parser = [[SBJsonStreamParser alloc] init];
+	SBJsonStreamParser *parser = [[[SBJsonStreamParser alloc] init] autorelease];
 	parser.maxDepth = self.maxDepth;
 	parser.delegate = adapter;
 	

@@ -172,7 +172,7 @@ static NSCharacterSet *kDecimalDigitCharacterSet;
                 return sbjson_token_string;
                 
             } else {
-                acc = [string mutableCopy];
+                acc = [[string mutableCopy] autorelease];
             }
         }
 

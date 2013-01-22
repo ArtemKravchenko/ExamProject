@@ -26,17 +26,17 @@
     
     self.dv = [[EPDetailViewController new] autorelease];
     UINavigationController *detailNC = [[[UINavigationController alloc] initWithRootViewController:self.dv] autorelease];
-    detailNC.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMostViewed tag:0];
+    detailNC.tabBarItem = [[[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMostViewed tag:0] autorelease];
     [EPWeatherTracker share].delegate = self.dv;
     
     EPFavoritesViewController *fv = [[EPFavoritesViewController new] autorelease];
     UINavigationController *favoriteNC = [[[UINavigationController alloc] initWithRootViewController:fv] autorelease];
-    favoriteNC.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:1];
+    favoriteNC.tabBarItem = [[[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:1] autorelease];
     self.dv.delegate = fv;
     
     EPHistoryViewController *hv = [[EPHistoryViewController new] autorelease];
     UINavigationController *historyNC = [[[UINavigationController alloc] initWithRootViewController:hv] autorelease];
-    historyNC.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:2];
+    historyNC.tabBarItem = [[[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:2] autorelease];
     
     NSArray *controllers = [NSArray arrayWithObjects: detailNC, favoriteNC, historyNC, nil];
     

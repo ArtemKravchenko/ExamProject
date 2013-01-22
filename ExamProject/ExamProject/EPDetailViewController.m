@@ -26,7 +26,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.iconView = [[UIImageView alloc] initWithImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[EPWeatherModel share].weatherDictionary[kIcon]]]]];
+    self.iconView = [[[UIImageView alloc] initWithImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[EPWeatherModel share].weatherDictionary[kIcon]]]]] autorelease];
     CGRect frame = CGRectMake(self.view.frame.size.width / 2 - 25, 0, 50, 50);
     self.iconView.frame = frame;
     
@@ -43,7 +43,7 @@
     [self.addToFavorites addTarget:self action:@selector(favoritesButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.addToFavorites];
     
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Social" style:UIBarButtonItemStyleBordered target:self action:@selector(socialSelected)];
+    UIBarButtonItem *rightButton = [[[UIBarButtonItem alloc] initWithTitle:@"Social" style:UIBarButtonItemStyleBordered target:self action:@selector(socialSelected)] autorelease];
     self.navigationItem.rightBarButtonItem = rightButton;
 }
 
